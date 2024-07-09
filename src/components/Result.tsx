@@ -10,13 +10,13 @@ const Result: React.FC<ResultProps> = ({ score, totalQuestions }) => {
 
   const message = () => {
     const percentageScore = percentage();
-    if (percentageScore >= 80) {
+    if (Number(percentageScore) >= 80) {
       return (
         <p>
           Excellent! You scored {score} out of {totalQuestions} ({percentageScore}%)
         </p>
       );
-    } else if (percentageScore >= 60) {
+    } else if (Number(percentageScore) >= 60) {
       return (
         <p>
           Good job! You scored {score} out of {totalQuestions} ({percentageScore}%)
